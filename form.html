@@ -8,20 +8,30 @@
         <link rel="stylesheet" href="form.css">
     </head>
     <body>
-       <div class="myForm">
-        <h1>Kindly fill in the survey form!</h1>
+       <div class="container">
+        <p>Kindly fill in the survey form!</p>
+        <br>
         <form>
+            <div class="userDetails">
+<div class="userInput">
             <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName">
-            <br>
+            <input type="text" name="firstName" id="firstName" placeholder="Enter first name">
+        </div>
+
+           <div class="userInput">
+
             <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName">
-            <br>
+            <input type="text" name="lastName" id="lastName" placeholder="Enter last name">
+            </div>
+
+            <div class="userInput">
             <label for="dob">DOB</label>
             <input type="date" id="dob">
-            <br>
+            </div>
+
+            <div class="userInput">
             <label for="country">Country</label>
-            <select aria-placeholder="select">
+            <select aria-placeholder="select" id="dropDown">
                 <option default>Select</option>
                 <option>India</option>
                 <option>America</option>
@@ -36,41 +46,62 @@
                 <option>Cuba</option>
                 <option>Brazil</option>
             </select>
+</div>
+<div class="userInput">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="Email" placeholder="Enter email address">
+    </div>
 
+    <div class="userInput">
+    <label for="telephone">Phone</label>
+    <input type="tel" id="telephone" name="Telephone" placeholder="Enter phone number">
+    </div>
+
+<div class="userInput">
             <fieldset>
             <legend>Gender</legend>
+            <div class="gender">
             <label for="female">Female</label>
             <input type="radio" name="gender" id="female">
-
+<br>
             <label for="male">Male</label>
             <input type="radio" name="gender" id="male">
-
+<br>
             <label for="other">Other</label>
             <input type="radio" name="gender" id="other">
-        </fieldset>
-            <fieldset>
-                <legend>Profession</legend>
+            </div>
+          </fieldset>
+          </div>
 
+          <div class="userInput">
+              <fieldset>
+                <legend>Profession</legend>
+<div class="profession">
                 <label for="fullStackDeveloper">Full Stack Developer</label>
                 <input type="checkbox" id="fullStackDeveloper">
+                <br>
 
                 <label for="frontendDeveloper">Frontend Developer</label>
                 <input type="checkbox" id="frontendDeveloper">
+                <br>
 
                 <label for="backendDeveloper">Backend Developer</label>
                 <input type="checkbox" id="backendDeveloper">
+                <br>
 
                 <label for="softwareEngineer">Software Engineer</label>
                 <input type="checkbox" id="softwareEngineer">
-            </fieldset>
-            <lable for="email">Email</lable>
-            <input type="email" id="email">
-            <br>
-            <lable for="telephone">Phone</lable>
-            <input type="tel" id="telephone">
-            <br>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
+                </div>
+             </fieldset>
+        </div>
+
+
+            <div class="userInput">
+            <button class="btn submit" type="submit">Submit</button>
+            <button class="btn reset" type="reset">Reset</button>
+            </div>
+
+            </div>
         </form>
        </div>
     </body>

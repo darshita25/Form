@@ -1,7 +1,75 @@
-.myForm{
-    width: 60%;
-    display: block;
-    text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
     align-items: center;
-    border-color: black 1px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+}
+.container{
+   max-width: 700px;
+   width: 100%;
+   background-color: aliceblue;
+   padding: 25px 30px;
+   border-radius: 5px;
+}
+
+.container p{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container form label{
+    font-size: 15px;
+    font-weight: 600;
+    margin:auto;
+}
+.container form .userDetails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.container form input,select{
+    font-size: 15px;
+    height: 25px;
+    border: none;
+}
+.container form input,label{
+    display: inline-block;
+}
+
+.container form #firstName,#lastName,#dob,#dropDown,#email,#telephone{
+    width: 200px;
+    padding-left: 10px;
+}
+.btn{
+    background-color: rgb(69, 69, 240);
+    width: 100px;
+    height: 20px;
+    border: none;
+    border-radius: 30px;
+    color: aliceblue;
+}
+.container form .userInput{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.profession, .gender{
+    padding: 0px 15px 15px 15px;
+}
+.profession label,.gender label{
+    padding-right: 35px;
+}
+.container form fieldset{
+    margin-left: 50px;
 }
