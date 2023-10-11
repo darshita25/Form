@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form using html,css,js</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+       <div class="myForm">
+        <h1>Kindly fill in the survey form!</h1>
+        <form>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName">
+            <br>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName">
+            <br>
+            <label for="dob">DOB</label>
+            <input type="date" id="dob">
+            <br>
+            <label for="country">Country</label>
+            <select aria-placeholder="select">
+                <option default>Select</option>
+                <option>India</option>
+                <option>America</option>
+                <option>Germany</option>
+                <option>Nepal</option>
+                <option>China</option>
+                <option>Bhutan</option>
+                <option>Sri Lanka</option>
+                <option>France</option>
+                <option>Australia</option>
+                <option>Colombia</option>
+                <option>Cuba</option>
+                <option>Brazil</option>
+            </select>
+
+            <fieldset>
+            <legend>Gender</legend>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female">
+
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male">
+
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other">
+        </fieldset>
+            <fieldset>
+                <legend>Profession</legend>
+
+                <label for="fullStackDeveloper">Full Stack Developer</label>
+                <input type="checkbox" id="fullStackDeveloper">
+
+                <label for="frontendDeveloper">Frontend Developer</label>
+                <input type="checkbox" id="frontendDeveloper">
+
+                <label for="backendDeveloper">Backend Developer</label>
+                <input type="checkbox" id="backendDeveloper">
+
+                <label for="softwareEngineer">Software Engineer</label>
+                <input type="checkbox" id="softwareEngineer">
+            </fieldset>
+            <lable for="email">Email</lable>
+            <input type="email" id="email">
+            <br>
+            <lable for="telephone">Phone</lable>
+            <input type="tel" id="telephone">
+            <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+       </div>
+    </body>
+</html>
