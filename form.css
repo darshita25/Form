@@ -70,6 +70,31 @@ body{
 .profession label,.gender label{
     padding-right: 35px;
 }
+.gender label{
+    padding-right: 120px;
+}
 .container form fieldset{
-    margin-left: 50px;
+    margin-left: 45px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-right: 20px;
+}
+.buttons{
+    display: flex;
+    margin-left: 200px;
+}
+.form-control small{
+    color:red;
+    position: absolute;
+    top: 156px;
+    left: 0;
+    visibility: hidden;
+    padding-left: 40px;
+}
+.form-control.error small{
+    visibility: visible;
 }

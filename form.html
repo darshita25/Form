@@ -5,21 +5,68 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Form using html,css,js</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+            function validate(){
+                var firstName=document.getElementById('firstName');
+                var lastName=document.getElementById('lastName');
+                var email=document.getElementById('email');
+                var telephone=document.getElementById('telephone');
+                var dob=document.getElementById('dob');
+
+                if(firstName.value.trim() =="")
+                alert("First Name can't be blank ");
+
+                else if(lastName.value.trim() =="")
+                alert("Last Name can't be blank ");
+
+                else if(email.value.trim() =="")
+                alert("Email can't be blank ");
+
+                else if(telephone.value.trim() =="")
+                alert("Phone number can't be blank ");
+
+                else if(dob.value =="")
+                alert("DOB can't be blank ");
+
+                else if(!isNaN(telephone) || telephone.length<10)
+                alert("Invalid phone entry")
+
+                else
+                showDetailsPopup();
+            }
+            function showDetailsPopup() {
+            var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var email = document.getElementById('email').value;
+                var telephone = document.getElementById('telephone').value;
+                var dob = document.getElementById('dob').value;
+
+                // Create a string with the details
+                var details = "First Name: " + firstName +
+                              "\nLast Name: " + lastName +
+                              "\nEmail: " + email +
+                              "\nPhone: " + telephone +
+                              "\nDOB: " + dob;
+
+                // Show a popup with the details
+                alert(details);
+            }
+        </script>
         <link rel="stylesheet" href="form.css">
     </head>
     <body>
        <div class="container">
         <p>Kindly fill in the survey form!</p>
         <br>
-        <form>
-            <div class="userDetails">
-<div class="userInput">
+        <form id="form" class="form" onsubmit="validate()">
+         <div class="userDetails"> 
+
+          <div class="userInput">
             <label for="firstName">First Name</label>
             <input type="text" name="firstName" id="firstName" placeholder="Enter first name">
-        </div>
+          </div>
 
            <div class="userInput">
-
             <label for="lastName">Last Name</label>
             <input type="text" name="lastName" id="lastName" placeholder="Enter last name">
             </div>
@@ -60,14 +107,14 @@
 <div class="userInput">
             <fieldset>
             <legend>Gender</legend>
-            <div class="gender">
+            <div class="gender" id="gender">
             <label for="female">Female</label>
             <input type="radio" name="gender" id="female">
 <br>
-            <label for="male">Male</label>
+            <label for="male" style="padding-right: 139px;">Male</label>
             <input type="radio" name="gender" id="male">
 <br>
-            <label for="other">Other</label>
+            <label for="other" style="padding-right: 131px;">Other</label>
             <input type="radio" name="gender" id="other">
             </div>
           </fieldset>
@@ -76,8 +123,8 @@
           <div class="userInput">
               <fieldset>
                 <legend>Profession</legend>
-<div class="profession">
-                <label for="fullStackDeveloper">Full Stack Developer</label>
+<div class="profession" id="profession">
+                <label for="fullStackDeveloper">Fullstack Developer</label>
                 <input type="checkbox" id="fullStackDeveloper">
                 <br>
 
@@ -85,18 +132,18 @@
                 <input type="checkbox" id="frontendDeveloper">
                 <br>
 
-                <label for="backendDeveloper">Backend Developer</label>
+                <label for="backendDeveloper" style="padding-right: 38px;">Backend Developer</label>
                 <input type="checkbox" id="backendDeveloper">
                 <br>
 
-                <label for="softwareEngineer">Software Engineer</label>
+                <label for="softwareEngineer">Software Developer</label>
                 <input type="checkbox" id="softwareEngineer">
                 </div>
              </fieldset>
         </div>
 
 
-            <div class="userInput">
+            <div class="buttons">
             <button class="btn submit" type="submit">Submit</button>
             <button class="btn reset" type="reset">Reset</button>
             </div>
